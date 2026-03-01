@@ -164,6 +164,10 @@
 </template>
 
 <script>
+definePageMeta({
+  middleware: 'auth'
+})
+
 export default {
   setup() {
     const notesStore = useNotesStore()
