@@ -1,6 +1,7 @@
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+You can see preview project [Open project in your browser](https://nuxt.com/docs/getting-started/introduction)
 
 ## Setup
 
