@@ -12,7 +12,8 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'http://localhost:3001',
-    'https://nexus-notes-223.vercel.app/'
+    'https://nexus-notes.vercel.app',
+    'https://nexus-notes-223-emp4qmd2w-yaroslavs-projects-37ebbfd6.vercel.app'
   ],
   credentials: true,
 }))
