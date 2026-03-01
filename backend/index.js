@@ -19,6 +19,14 @@ app.use(express.urlencoded({ extended: true }))
 // Публичные роуты (без токена)
 app.use('/api', authRoutes)
 
+app.use(cors({
+  origin: [
+    'http://localhost:3001',
+    'https://nexus-notes.up.railway.app/'
+  ],
+  credentials: true,
+}))
+
 // Защищённые роуты (с токеном)
 app.use('/api', authenticateToken, userRoutes)
 app.use('/api', authenticateToken, notesRoutes)
