@@ -4,6 +4,9 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 ### You can open project in your browser
 [Open project](https://nexus-notes-223-emp4qmd2w-yaroslavs-projects-37ebbfd6.vercel.app)
 
+#### You can see preview project 
+[Open project in your browser]([https://nuxt.com/docs/getting-started/introduction](https://nexus-notes-223-emp4qmd2w-yaroslavs-projects-37ebbfd6.vercel.app/))
+
 ## Setup
 
 Make sure to install dependencies:
