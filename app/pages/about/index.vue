@@ -1,8 +1,6 @@
 <template>
   <section class="min-h-screen bg-white dark:bg-black">
     <div class="max-w-4xl mx-auto px-6 py-24">
-
-      <!-- Top badge -->
       <div class="flex justify-center mb-12">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full
                     bg-blue-500/8 dark:bg-blue-500/10
@@ -13,34 +11,24 @@
           </span>
         </div>
       </div>
-
-      <!-- Main card -->
       <div class="relative rounded-3xl overflow-hidden
                   bg-zinc-50 dark:bg-zinc-900
                   border border-zinc-200 dark:border-zinc-800">
-
-        <!-- Top glow line -->
         <div class="absolute inset-x-0 top-0 h-px
                     bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-
-        <!-- Profile block -->
         <div class="p-8 sm:p-12">
           <div class="flex flex-col sm:flex-row items-start gap-8">
-
-            <!-- Avatar -->
             <div class="shrink-0">
               <div class="relative w-24 h-24">
                 <div class="w-24 h-24 rounded-2xl overflow-hidden
                             bg-zinc-200 dark:bg-zinc-800
                             border border-zinc-300 dark:border-zinc-700
                             flex items-center justify-center">
-                  <!-- Замени на <img src="..." class="w-full h-full object-cover" /> -->
                   <svg class="w-10 h-10 text-zinc-400 dark:text-zinc-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                     <circle cx="12" cy="7" r="4"/>
                   </svg>
                 </div>
-                <!-- Online dot -->
                 <div class="absolute -bottom-1.5 -right-1.5
                             w-5 h-5 rounded-full
                             bg-white dark:bg-zinc-900
@@ -50,8 +38,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Info -->
             <div class="flex-1 min-w-0">
               <div class="flex flex-wrap items-center gap-2.5 mb-2">
                 <h1 class="text-xl font-semibold tracking-tight text-zinc-900 dark:text-white">
@@ -75,8 +61,6 @@
                 and writing code that is both readable and elegant. Always learning,
                 always shipping.
               </p>
-
-              <!-- Tags -->
               <div class="flex flex-wrap gap-2 mt-4">
                 <span v-for="tag in tags" :key="tag"
                   class="text-xs px-2.5 py-1 rounded-full
@@ -89,11 +73,7 @@
             </div>
           </div>
         </div>
-
-        <!-- Divider -->
         <div class="h-px bg-gradient-to-r from-transparent via-zinc-200 dark:via-zinc-800 to-transparent" />
-
-        <!-- Contact links -->
         <div class="px-8 sm:px-12 py-6 flex flex-wrap gap-2.5">
 
           <NuxtLink
@@ -158,8 +138,6 @@
 
         </div>
       </div>
-
-      <!-- Stats row -->
       <div class="grid grid-cols-3 gap-4 mt-4">
         <div v-for="stat in stats" :key="stat.label"
           class="rounded-2xl p-6 text-center
@@ -173,8 +151,6 @@
           </p>
         </div>
       </div>
-
-      <!-- Stack -->
       <div class="mt-4 rounded-3xl p-8 sm:p-10
                   bg-zinc-50 dark:bg-zinc-900
                   border border-zinc-200 dark:border-zinc-800">
