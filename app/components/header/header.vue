@@ -6,15 +6,11 @@
       : 'bg-transparent border-b border-transparent'"
   >
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-
-      <!-- Left: Logo + Nav -->
       <div class="flex items-center gap-8">
         <NuxtLink to="/"
           class="text-lg font-bold tracking-tight text-zinc-900 dark:text-white hover:opacity-80 transition-opacity">
           Nexus Notes
         </NuxtLink>
-
-        <!-- Desktop nav -->
         <nav class="hidden md:flex items-center gap-1
                     px-2 py-1.5 rounded-2xl
                     bg-zinc-100 dark:bg-zinc-900
@@ -32,11 +28,7 @@
           </NuxtLink>
         </nav>
       </div>
-
-      <!-- Right: Theme + Auth + Burger -->
       <div class="flex items-center gap-2">
-
-        <!-- Not logged in -->
         <div v-if="!userStore.id" class="hidden sm:flex items-center gap-2">
           <button
             @click="showLoginModal = true"
@@ -55,8 +47,6 @@
             Create account
           </button>
         </div>
-
-        <!-- Logged in — user dropdown -->
         <div v-else class="relative group">
           <button
             class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl transition-all duration-200
@@ -77,8 +67,6 @@
               <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </button>
-
-          <!-- Dropdown -->
           <div class="absolute right-0 top-full mt-2 w-48 rounded-2xl overflow-hidden
                       opacity-0 invisible translate-y-1
                       group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
@@ -111,8 +99,6 @@
             </button>
           </div>
         </div>
-
-        <!-- Mobile burger -->
         <button
           @click="mobileOpen = !mobileOpen"
           class="md:hidden w-9 h-9 rounded-xl flex items-center justify-center transition-all
@@ -129,8 +115,6 @@
         </button>
       </div>
     </div>
-
-    <!-- Mobile menu -->
     <Transition name="mobile-menu">
       <div v-if="mobileOpen"
         class="md:hidden border-t border-zinc-200 dark:border-zinc-800
@@ -147,8 +131,6 @@
         >
           {{ item.label }}
         </NuxtLink>
-
-        <!-- Mobile auth buttons -->
         <div v-if="!userStore.id" class="flex flex-col gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-900">
           <button
             @click="showLoginModal = true; mobileOpen = false"
@@ -165,8 +147,6 @@
         </div>
       </div>
     </Transition>
-
-    <!-- Login Modal -->
     <Teleport to="body">
       <Transition name="modal">
         <div v-if="showLoginModal" class="modal-overlay" @click.self="closeModal">
@@ -296,7 +276,6 @@ export default {
     }
 
     onMounted(() => {
-      // restore theme
       const saved = localStorage.getItem('theme')
       if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         isDark.value = true
@@ -394,7 +373,6 @@ export default {
 .login-btn:active { transform: translateY(0); }
 .login-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
-/* Modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -407,7 +385,6 @@ export default {
   backdrop-filter: blur(8px);
 }
 
-/* Transitions */
 .modal-enter-active, .modal-leave-active { transition: opacity 0.2s ease; }
 .modal-enter-from, .modal-leave-to { opacity: 0; }
 
