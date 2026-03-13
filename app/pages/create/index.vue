@@ -1,8 +1,6 @@
 <template>
   <section class="min-h-screen px-6 py-20 bg-white dark:bg-black">
     <div class="max-w-3xl mx-auto">
-
-      <!-- Header -->
       <div class="mb-12">
         <div class="flex items-center gap-3 mb-4">
           <div class="w-8 h-8 rounded-lg bg-blue-500/10 dark:bg-blue-500/20 flex items-center justify-center">
@@ -15,11 +13,7 @@
         <h1 class="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white">Create a note</h1>
         <p class="mt-2 text-sm text-zinc-500 dark:text-zinc-400">Capture your thoughts and ideas.</p>
       </div>
-
-      <!-- Form -->
       <form @submit.prevent="handleSubmit" class="space-y-6">
-
-        <!-- Title -->
         <div>
           <label class="block text-[13px] font-medium mb-2 text-zinc-600 dark:text-zinc-400">Title</label>
           <input
@@ -36,8 +30,6 @@
             required
           />
         </div>
-
-        <!-- Tags -->
         <div>
           <label class="block text-[13px] font-medium mb-2 text-zinc-600 dark:text-zinc-400">Tags</label>
           <div v-if="tags.length" class="flex flex-wrap gap-2 mb-2">
@@ -72,8 +64,6 @@
           />
           <p class="mt-1.5 text-xs text-zinc-400 dark:text-zinc-600">Press Enter or comma to add a tag</p>
         </div>
-
-        <!-- Content editor -->
         <div>
           <label class="block text-[13px] font-medium mb-2 text-zinc-600 dark:text-zinc-400">Content</label>
           <div
@@ -82,7 +72,6 @@
               ? 'border-blue-500 ring-2 ring-blue-500/15'
               : 'border-zinc-200 dark:border-zinc-800'"
           >
-            <!-- Toolbar -->
             <div class="flex items-center gap-0.5 px-2.5 py-2
                         border-b border-zinc-200 dark:border-zinc-800
                         bg-zinc-50 dark:bg-zinc-900">
@@ -147,8 +136,6 @@
                 {{ description.length }} chars
               </span>
             </div>
-
-            <!-- Textarea -->
             <textarea
               ref="textareaRef"
               v-model="description"
@@ -164,8 +151,6 @@
             />
           </div>
         </div>
-
-        <!-- Date -->
         <div>
           <label class="block text-[13px] font-medium mb-2 text-zinc-600 dark:text-zinc-400">Date</label>
           <input
@@ -180,14 +165,10 @@
                    [color-scheme:light] dark:[color-scheme:dark]"
           />
         </div>
-
-        <!-- Error -->
         <p v-if="error"
           class="text-sm text-red-500 bg-red-500/8 border border-red-500/20 rounded-xl px-4 py-3">
           {{ error }}
         </p>
-
-        <!-- Actions -->
         <div class="flex items-center gap-3 pt-2">
           <button type="submit" :disabled="loading" class="save-btn">
             <span v-if="!loading">Save Note</span>
