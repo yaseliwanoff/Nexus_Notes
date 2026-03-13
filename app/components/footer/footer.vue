@@ -4,7 +4,6 @@
            bg-white dark:bg-black
            border-t border-zinc-200 dark:border-zinc-800"
   >
-    <!-- Ambient glow -->
     <div class="pointer-events-none absolute inset-0 overflow-hidden">
       <div class="absolute -bottom-32 left-1/2 -translate-x-1/2
                   w-[900px] h-[400px]
@@ -16,11 +15,7 @@
     </div>
 
     <div class="relative max-w-7xl mx-auto px-6 pt-16 pb-8">
-
-      <!-- Main grid -->
       <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 mb-14">
-
-        <!-- Brand -->
         <div class="sm:col-span-2 lg:col-span-1">
           <span class="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
             Nexus Notes
@@ -28,8 +23,6 @@
           <p class="mt-3 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 max-w-[220px]">
             A minimal and powerful note-taking app designed for modern thinkers.
           </p>
-
-          <!-- Social icons -->
           <div class="mt-6 flex items-center gap-2">
             <a v-for="social in socials" :key="social.label"
               :href="social.href"
@@ -45,8 +38,6 @@
             </a>
           </div>
         </div>
-
-        <!-- Product -->
         <div>
           <h4 class="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4">
             Product
@@ -62,8 +53,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- Company -->
         <div>
           <h4 class="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4">
             Company
@@ -79,8 +68,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- Newsletter -->
         <div>
           <h4 class="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4">
             Stay Updated
@@ -116,11 +103,7 @@
         </div>
 
       </div>
-
-      <!-- Divider -->
       <div class="h-px bg-zinc-200 dark:bg-zinc-800 mb-8" />
-
-      <!-- Bottom bar -->
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-xs text-zinc-400 dark:text-zinc-600 order-2 sm:order-1">
           © {{ new Date().getFullYear() }} Nexus Notes. All rights reserved.
