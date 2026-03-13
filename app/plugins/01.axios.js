@@ -18,13 +18,11 @@ export default defineNuxtPlugin(() => {
     return requestConfig
   })
 
-  // Перехватывает 401 — чистит сессию и редиректит на логин
   axios.interceptors.response.use(
     (response) => response,
     (error) => {
       if (import.meta.client && error.response?.status === 401) {
         const route = useRoute()
-        // Не трогаем публичные страницы
         const publicRoutes = ['/login', '/register']
         if (!publicRoutes.includes(route.path)) {
           const userStore = useUserStore()
