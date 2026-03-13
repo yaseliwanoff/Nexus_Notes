@@ -1,20 +1,14 @@
 <template>
   <section class="relative py-32 overflow-hidden bg-white dark:bg-black">
-
-    <!-- Background grid pattern -->
     <div class="pointer-events-none absolute inset-0
                 bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)]
                 dark:bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]
                 bg-[size:48px_48px]" />
-
-    <!-- Top glow -->
     <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2
                 w-[700px] h-[400px]
                 bg-[radial-gradient(ellipse_at_top,rgba(69,131,224,0.1),transparent_70%)]" />
 
     <div class="relative max-w-6xl mx-auto px-6">
-
-      <!-- Header -->
       <div class="text-center max-w-2xl mx-auto mb-16">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-6
                     bg-blue-500/8 dark:bg-blue-500/10
@@ -34,11 +28,7 @@
           focus, think clearly, and keep your ideas structured.
         </p>
       </div>
-
-      <!-- Bento grid -->
       <div class="grid grid-cols-3 gap-4 auto-rows-[280px]">
-
-        <!-- Card 1: Smart Editor — 2 cols -->
         <div class="col-span-2 group relative rounded-3xl p-8 overflow-hidden
                     bg-zinc-50 dark:bg-zinc-900
                     border border-zinc-200 dark:border-zinc-800
@@ -66,8 +56,6 @@
             <div class="h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 w-2/3" />
           </div>
         </div>
-
-        <!-- Card 2: Secure — 1 col -->
         <div class="col-span-1 group relative rounded-3xl p-8 overflow-hidden
                     bg-zinc-50 dark:bg-zinc-900
                     border border-zinc-200 dark:border-zinc-800
@@ -96,8 +84,6 @@
             <div class="h-1 flex-1 rounded-full bg-emerald-500/80"/>
           </div>
         </div>
-
-        <!-- Card 3: Collections — 1 col -->
         <div class="col-span-1 group relative rounded-3xl p-8 overflow-hidden
                     bg-zinc-50 dark:bg-zinc-900
                     border border-zinc-200 dark:border-zinc-800
@@ -126,8 +112,6 @@
             <div class="h-6 w-10 rounded-md bg-purple-500/10 border border-purple-500/20"/>
           </div>
         </div>
-
-        <!-- Card 4: Search — 1 col -->
         <div class="col-span-1 group relative rounded-3xl p-8 overflow-hidden
                     bg-zinc-50 dark:bg-zinc-900
                     border border-zinc-200 dark:border-zinc-800
@@ -157,8 +141,6 @@
             <div class="h-1.5 flex-1 rounded-full bg-zinc-200 dark:bg-zinc-700"/>
           </div>
         </div>
-
-        <!-- Card 5: Insights — 1 col -->
         <div class="col-span-1 group relative rounded-3xl p-8 overflow-hidden
                     bg-zinc-50 dark:bg-zinc-900
                     border border-zinc-200 dark:border-zinc-800
@@ -189,7 +171,6 @@
             <div class="flex-1 rounded-sm bg-blue-500" style="height:100%"/>
           </div>
         </div>
-
       </div>
     </div>
   </section>
