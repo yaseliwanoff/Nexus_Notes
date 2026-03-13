@@ -1,8 +1,6 @@
 <template>
   <section class="min-h-screen px-6 py-20 bg-white dark:bg-black">
     <div class="max-w-7xl mx-auto">
-
-      <!-- Header -->
       <div class="flex items-end justify-between mb-14">
         <div>
           <p class="text-xs font-medium tracking-widest uppercase text-zinc-400 dark:text-zinc-600 mb-2">
@@ -17,14 +15,10 @@
           New Note
         </NuxtLink>
       </div>
-
-      <!-- Loading skeletons -->
       <div v-if="notesStore.loading" class="notes-grid">
         <div v-for="i in 6" :key="i"
           class="h-48 rounded-2xl bg-zinc-100 dark:bg-zinc-900 animate-pulse" />
       </div>
-
-      <!-- Empty state -->
       <div v-else-if="!notesStore.notes.length"
         class="flex flex-col items-center justify-center py-40 text-center">
         <div class="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-900
@@ -37,8 +31,6 @@
         <p class="text-lg font-semibold text-zinc-900 dark:text-white">No notes yet</p>
         <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-500">Create your first note to get started.</p>
       </div>
-
-      <!-- Notes grid -->
       <div v-else class="notes-grid">
         <article
           v-for="note in notesStore.notes"
@@ -51,12 +43,10 @@
                  hover:-translate-y-1
                  transition-all duration-300"
         >
-          <!-- Top glow on hover -->
           <div class="pointer-events-none absolute inset-x-0 top-0 h-px
                       bg-gradient-to-r from-transparent via-blue-500/40 to-transparent
                       opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
 
-          <!-- Tags -->
           <div v-if="note.tags?.length" class="flex flex-wrap gap-1.5 mb-4">
             <span
               v-for="tag in note.tags" :key="tag.name"
@@ -66,20 +56,14 @@
                      border border-zinc-200 dark:border-zinc-700"
             >{{ tag.name }}</span>
           </div>
-
-          <!-- Title -->
           <h3 class="text-sm font-semibold leading-snug mb-2
                      text-zinc-900 dark:text-white">
             {{ note.title }}
           </h3>
-
-          <!-- Preview -->
           <p class="text-xs leading-relaxed line-clamp-3
                     text-zinc-500 dark:text-zinc-500">
             {{ note.description }}
           </p>
-
-          <!-- Footer -->
           <div class="mt-5 pt-4 flex items-center justify-between
                       border-t border-zinc-100 dark:border-zinc-800">
             <span class="text-xs text-zinc-400 dark:text-zinc-600">{{ note.data }}</span>
@@ -94,8 +78,6 @@
         </article>
       </div>
     </div>
-
-    <!-- Modal -->
     <Teleport to="body">
       <Transition name="modal">
         <div v-if="selectedNote" class="modal-overlay" @click.self="closeModal">
@@ -103,8 +85,6 @@
                       bg-white dark:bg-zinc-900
                       border border-zinc-200 dark:border-zinc-800
                       shadow-2xl dark:shadow-black/60">
-
-            <!-- Tags + close -->
             <div class="flex items-start justify-between mb-6">
               <div v-if="selectedNote.tags?.length" class="flex flex-wrap gap-1.5">
                 <span
@@ -127,14 +107,10 @@
                 </svg>
               </button>
             </div>
-
-            <!-- Title -->
             <h2 class="text-2xl font-semibold tracking-tight mb-2
                       text-zinc-900 dark:text-white">
               {{ selectedNote.title }}
             </h2>
-
-            <!-- Date -->
             <p class="flex items-center gap-1.5 mb-6 text-xs
                       text-zinc-400 dark:text-zinc-600">
               <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -145,11 +121,7 @@
               </svg>
               {{ selectedNote.data }}
             </p>
-
-            <!-- Divider -->
             <div class="h-px mb-6 bg-gradient-to-r from-transparent via-zinc-200 dark:via-zinc-700 to-transparent"/>
-
-            <!-- Body -->
             <div class="text-sm leading-relaxed whitespace-pre-wrap
                         max-h-[50vh] overflow-y-auto
                         text-zinc-600 dark:text-zinc-400">
@@ -215,8 +187,7 @@ export default {
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(59,130,246,0.4);
 }
-
-/* Modal */
+  
 .modal-overlay {
   position: fixed; inset: 0; z-index: 100;
   display: flex; align-items: center; justify-content: center;
@@ -235,8 +206,6 @@ export default {
   border-color: #27272a;
   box-shadow: 0 30px 60px rgba(0,0,0,0.7);
 }
-
-/* Modal transition */
 .modal-enter-active,
 .modal-leave-active {
   transition: opacity 0.2s ease;
