@@ -1,24 +1,18 @@
 <template>
   <section class="bg-white dark:bg-black px-6 py-24">
     <div class="max-w-4xl mx-auto">
-
       <div class="relative rounded-3xl overflow-hidden px-10 py-20 text-center
                   bg-zinc-50 dark:bg-zinc-900
                   border border-zinc-200 dark:border-zinc-800">
 
-        <!-- Ambient glow -->
         <div class="pointer-events-none absolute inset-0 overflow-hidden">
           <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                       w-[600px] h-[300px]
                       bg-[radial-gradient(ellipse_at_center,rgba(69,131,224,0.15),transparent_70%)]
                       blur-3xl" />
         </div>
-
-        <!-- Top glow line -->
         <div class="absolute inset-x-0 top-0 h-px
                     bg-gradient-to-r from-transparent via-blue-500/60 to-transparent" />
-
-        <!-- Badge -->
         <div class="relative flex justify-center mb-8">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full
                       bg-blue-500/8 dark:bg-blue-500/10
@@ -29,19 +23,14 @@
             </span>
           </div>
         </div>
-
-        <!-- Heading -->
         <div class="relative mb-4">
           <h2 class="text-4xl sm:text-5xl font-semibold tracking-tight text-zinc-900 dark:text-white">
             Start writing today
           </h2>
         </div>
-
         <p class="relative text-base text-zinc-500 dark:text-zinc-400 max-w-lg mx-auto mb-10">
           No setup, no subscriptions. Create an account and your first note in under a minute.
         </p>
-
-        <!-- Actions -->
         <div class="relative flex flex-col sm:flex-row items-center justify-center gap-3">
           <NuxtLink to="/register" class="cta-primary-btn">
             Get started for free
@@ -60,8 +49,6 @@
             Browse notes
           </NuxtLink>
         </div>
-
-        <!-- Stats strip -->
         <div class="relative mt-14 pt-8 border-t border-zinc-200 dark:border-zinc-800
                     flex flex-col sm:flex-row items-center justify-center gap-8">
           <div v-for="stat in stats" :key="stat.label" class="text-center">
@@ -71,7 +58,6 @@
             <p class="text-xs text-zinc-400 dark:text-zinc-600 mt-0.5">{{ stat.label }}</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
