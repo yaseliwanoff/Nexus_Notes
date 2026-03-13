@@ -1,13 +1,9 @@
 <template>
   <section class="relative overflow-hidden bg-white dark:bg-black">
-
-    <!-- Background grid -->
     <div class="pointer-events-none absolute inset-0
                 bg-[linear-gradient(to_right,rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.04)_1px,transparent_1px)]
                 dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)]
                 bg-[size:48px_48px]" />
-
-    <!-- Glow blobs -->
     <div class="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full
                 bg-blue-500/10 dark:bg-blue-500/8 blur-[100px]" />
     <div class="pointer-events-none absolute -bottom-32 -right-32 w-[400px] h-[400px] rounded-full
@@ -16,10 +12,7 @@
     <div class="relative max-w-7xl mx-auto px-6 py-28 lg:py-40">
       <div class="grid lg:grid-cols-2 gap-20 items-center">
 
-        <!-- Left col -->
         <div>
-
-          <!-- Badge -->
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 mb-8 rounded-full text-xs font-medium
                       border border-zinc-200 dark:border-zinc-800
                       bg-zinc-50 dark:bg-zinc-900
@@ -27,8 +20,6 @@
             <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"/>
             Smart note taking for modern thinkers
           </div>
-
-          <!-- Heading -->
           <h1 class="text-5xl sm:text-6xl font-bold tracking-tight leading-[1.08]
                      text-zinc-900 dark:text-white">
             Capture Ideas.
@@ -45,8 +36,6 @@
             A minimal and powerful note-taking app designed to help you think clearly,
             stay organized, and never lose an idea again.
           </p>
-
-          <!-- CTA -->
           <div class="mt-10 flex flex-col sm:flex-row gap-3">
             <button class="hero-btn-primary px-6 py-3 rounded-xl text-sm font-semibold">
               Get Started
@@ -60,8 +49,6 @@
               Live Demo
             </button>
           </div>
-
-          <!-- Stats -->
           <div class="mt-16 flex gap-10">
             <div v-for="stat in stats" :key="stat.label">
               <p class="text-2xl font-bold text-zinc-900 dark:text-white">{{ stat.value }}</p>
@@ -69,11 +56,7 @@
             </div>
           </div>
         </div>
-
-        <!-- Right col — mock UI card -->
         <div class="relative">
-
-          <!-- Outer glow -->
           <div class="absolute inset-0 rounded-3xl blur-2xl scale-95
                       bg-blue-500/10 dark:bg-blue-500/8" />
 
@@ -81,8 +64,6 @@
                       border border-zinc-200 dark:border-zinc-800
                       bg-white dark:bg-zinc-900
                       shadow-2xl shadow-zinc-200/60 dark:shadow-black/60">
-
-            <!-- Window bar -->
             <div class="flex items-center justify-between px-5 py-3.5
                         border-b border-zinc-100 dark:border-zinc-800
                         bg-zinc-50 dark:bg-zinc-900">
@@ -94,11 +75,7 @@
               <span class="text-xs text-zinc-400 dark:text-zinc-600 font-mono">nexusnotes.app</span>
               <div class="w-16"/>
             </div>
-
-            <!-- Content -->
             <div class="p-7">
-
-              <!-- Note header -->
               <div class="flex items-center justify-between mb-5">
                 <div>
                   <p class="text-xs font-medium tracking-widest uppercase
@@ -114,8 +91,6 @@
                   </svg>
                 </div>
               </div>
-
-              <!-- Tasks -->
               <ul class="space-y-2.5 mb-6">
                 <li v-for="(task, i) in tasks" :key="i"
                   class="flex items-center gap-3 px-4 py-3 rounded-xl
@@ -137,8 +112,6 @@
                   </span>
                 </li>
               </ul>
-
-              <!-- Quote -->
               <div class="px-4 py-3.5 rounded-xl
                           border-l-2 border-blue-500
                           bg-blue-500/5 dark:bg-blue-500/8">
@@ -146,8 +119,6 @@
                   "The simplest way to capture your thoughts and turn them into action."
                 </p>
               </div>
-
-              <!-- Footer tags -->
               <div class="flex gap-2 mt-5">
                 <span v-for="tag in ['productivity', 'focus', 'planning']" :key="tag"
                   class="text-[11px] font-medium px-2.5 py-1 rounded-full
@@ -160,7 +131,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
