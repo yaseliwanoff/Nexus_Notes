@@ -2,8 +2,6 @@
   <section class="bg-zinc-50 dark:bg-zinc-950 px-6 py-24
                   border-y border-zinc-200 dark:border-zinc-800">
     <div class="max-w-7xl mx-auto">
-
-      <!-- Badge -->
       <div class="flex justify-center mb-6">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full
                     bg-blue-500/8 dark:bg-blue-500/10
@@ -14,8 +12,6 @@
           </span>
         </div>
       </div>
-
-      <!-- Heading -->
       <div class="text-center mb-16">
         <h2 class="text-4xl sm:text-5xl font-semibold tracking-tight text-zinc-900 dark:text-white mb-4">
           People love it
@@ -24,20 +20,14 @@
           Thinkers, writers, and developers who switched to Nexus Notes and never looked back.
         </p>
       </div>
-
-      <!-- Grid -->
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div v-for="(review, i) in testimonials" :key="i"
           class="relative rounded-3xl p-8
                  bg-white dark:bg-zinc-900
                  border border-zinc-200 dark:border-zinc-800
                  overflow-hidden">
-
-          <!-- Top glow line -->
           <div class="absolute inset-x-0 top-0 h-px
                       bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
-
-          <!-- Stars -->
           <div class="flex gap-0.5 mb-5">
             <svg v-for="s in 5" :key="s" class="w-3.5 h-3.5 text-blue-500"
                  viewBox="0 0 24 24" fill="currentColor">
@@ -48,8 +38,6 @@
           <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 mb-6">
             "{{ review.text }}"
           </p>
-
-          <!-- Author -->
           <div class="flex items-center gap-3 pt-5 border-t border-zinc-100 dark:border-zinc-800">
             <div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0
                         bg-blue-500/10 dark:bg-blue-500/15">
