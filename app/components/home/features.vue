@@ -1,8 +1,6 @@
 <template>
   <section class="bg-white dark:bg-black px-6 py-24 overflow-hidden">
     <div class="max-w-7xl mx-auto">
-
-      <!-- Badge -->
       <div class="flex justify-center mb-6">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full
                     bg-blue-500/8 dark:bg-blue-500/10
@@ -13,8 +11,6 @@
           </span>
         </div>
       </div>
-
-      <!-- Heading -->
       <div class="text-center mb-16">
         <h2 class="text-4xl sm:text-5xl font-semibold tracking-tight text-zinc-900 dark:text-white mb-4">
           Everything you need
@@ -23,29 +19,21 @@
           A focused set of tools that stay out of your way so you can think clearly and write freely.
         </p>
       </div>
-
-      <!-- Grid -->
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-
         <div v-for="feature in features" :key="feature.title"
           class="group relative rounded-3xl p-8 overflow-hidden
                  bg-zinc-50 dark:bg-zinc-900
                  border border-zinc-200 dark:border-zinc-800
                  hover:border-zinc-300 dark:hover:border-zinc-700
                  transition-all duration-300 hover:-translate-y-1">
-
-          <!-- Glow line top -->
           <div class="pointer-events-none absolute inset-x-0 top-0 h-px
                       bg-gradient-to-r from-transparent via-blue-500/40 to-transparent
                       opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-          <!-- Icon -->
           <div class="w-10 h-10 rounded-2xl mb-6 flex items-center justify-center
                       bg-blue-500/10 dark:bg-blue-500/15">
             <svg class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="1.8" v-html="feature.icon" />
           </div>
-
           <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-2">
             {{ feature.title }}
           </h3>
@@ -53,7 +41,6 @@
             {{ feature.description }}
           </p>
         </div>
-
       </div>
     </div>
   </section>
